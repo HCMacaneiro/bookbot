@@ -11,3 +11,18 @@ def count_characters(text):
         else:
             char_count[char] = 1
     return char_count
+
+
+def sort_on(items):
+    return items["num"]
+
+def sort_char_count(char_dict):
+    list_of_dicts = []
+    for char in char_dict:
+        if not char.isalpha():
+            continue
+        temp_dict = {"char": char, "num": char_dict[char]}
+        list_of_dicts.append(temp_dict)
+
+    list_of_dicts.sort(reverse=True, key=sort_on)
+    return list_of_dicts    
