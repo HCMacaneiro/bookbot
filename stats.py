@@ -4,7 +4,6 @@ def get_num_words(text):
 
 def count_characters(text):
     characters = text.lower()
-    print(f"Lower text: {characters}")
     char_count = {}
     for char in characters:
         if char in char_count:
